@@ -1,0 +1,66 @@
+[colors]
+background = #aa2F343F
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #dfdfdf
+primary = #8fbcbb
+secondary = #cba6f7
+alert = #bd2c40
+n1 = #5e81ac
+n2 = #81a1c1
+n3 = #88c0d0
+n4 = #8fbcbb
+
+[bar/time_bar]
+wm-restack = bspwm
+;monitor = ${env:MONITOR:HDMI-1}
+;width = 99.7%
+width = 2.5%
+height = 32
+;offset-x = .15%
+offset-x = 96.98%
+offset-y = .52%
+;radius-bottom = 6.0
+fixed-center = true
+
+font-3 = Hurmit Nerd Font Mono:style=bold:size=15
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=9:style=bold;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+
+modules-left = 
+modules-center = date
+modules-right = 
+
+scroll-down = i3wm-wsprev
+
+cursor-click = default
+cursor-scroll = default
+
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+time = %H:%M
+
+format-prefix =
+format-prefix-foreground = ${colors.foreground-alt}
+
+;label = %date% %time%
+label = %time%
